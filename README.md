@@ -1,34 +1,36 @@
-import java.util.*;
+Жоба туралы:
 
-class Student implements Comparable<Student> {
-    String name;
-    double gpa;
+Бұл жоба студенттердің рейтинг жүйесін құруға арналған. Бағдарлама студенттерді GPA (орташа балл) бойынша сұрыптайды және нәтижесін көрсетеді.
 
-    Student(String name, double gpa) {
-        this.name = name;
-        this.gpa = gpa;
-    }
+⸻
 
-    @Override
-    public int compareTo(Student other) {
-        return Double.compare(other.gpa, this.gpa);
-    }
-}
+Мақсаты:
 
-public class Main {
-    public static void main(String[] args) {
+Сұрыптау алгоритмдерін практикада қолдану
+Студенттерді GPA бойынша реттеу
+Comparable және Comparator қолдануды үйрену
 
-        List<Student> students = new ArrayList<>();
+⸻
 
-        students.add(new Student("Ali", 3.2));
-        students.add(new Student("Aruzhan", 3.8));
-        students.add(new Student("Dias", 2.9));
-        students.add(new Student("Dana", 3.5));
+Қолданылған технологиялар:
 
-        Collections.sort(students);
+Java
+Collections.sort()
+Comparable
 
-        for (Student s : students) {
-          System.out.println(s.name + " - " + s.gpa);
-        }
-    }
-}
+⸻
+
+Қалай жұмыс істейді?
+
+Бағдарламада студенттер тізімі құрылады. Әр студенттің аты және GPA мәні болады. Содан кейін: Comparable интерфейсі арқылы салыстыру жасалады
+Collections.sort() арқылы сұрыптау орындалады
+Нәтижесінде студенттер рейтинг бойынша шығады
+
+⸻
+
+📈 Нәтиже
+
+Aruzhan - 3.8
+Dana - 3.5
+Ali - 3.2
+Dias - 2.9
